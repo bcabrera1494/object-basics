@@ -60,19 +60,15 @@ function sumOfTripledEvens(array) {
         return num % 2 === 0;
     }
     const evenNums = arr.filter(getEvenNumbers);
-
     function triple(num) {
         return num * 3;
     }
     //map method
-
     const tripledEvens = evenNums.map(triple);
-
     //reduce method
     const sumOfAllTripledEvens = tripledEvens.reduce((total, currentItem) => {
         return total + currentItem;
     }, 0);
-    sumOfAllTripledEvens;
-
+    return sumOfAllTripledEvens;
 };
 console.log(sumOfTripledEvens(arr));
